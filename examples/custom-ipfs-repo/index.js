@@ -85,6 +85,8 @@ node.on('ready', () => {
     .then((data) => {
       console.log('\nFetched file content:')
       process.stdout.write(data)
+      console.log('\n\nStopping the node')
+      return node.stop()
     })
     // Log out the error, if there is one
     .catch((err) => {
